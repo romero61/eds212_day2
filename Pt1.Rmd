@@ -16,5 +16,23 @@ Find the derivative of $$f(x) - 5x^2$$
 ex_1 <- expression(5 * x ^ 2)
 
 my_derivative <- deriv(ex_1, "x")
+my_derivative
+
+#use the expression to find the slope at x = 2.8
+
+x <- 2.8
+eval(my_derivative)
+```
+
+Find the slope of $$g(z) = 2z^3 - 10.5z^2+4.1$$
+
+```{r}
+gz <- expression(z ^ 3 - 10.5 * z ^ 2 + 4.1)
+dg_dz <- D(gz, 'z')
+dg_dz
+
+# Let's evaluate the slope overa a range of values
+z <- seq(-3,4,0.5)
+eval(dg_dz)
 ```
 
