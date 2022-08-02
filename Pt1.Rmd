@@ -1,0 +1,20 @@
+---
+title: "EDS212_DAY2_PT1"
+author: "Guillermo Romero"
+date: "2022-08-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Derivative in R
+
+Find the derivative of $$f(x) - 5x^2$$
+```{r}
+ex_1 <- expression(5 * x ^ 2)
+
+my_derivative <- deriv(ex_1, "x")
+```
+
