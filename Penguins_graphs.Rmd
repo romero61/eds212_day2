@@ -11,16 +11,21 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-Ways to View a data frame. 
-head()
-glimpse()
-tail()
+Ways to View a data frame:
+- head()
+- glimpse()
+- tail()
 
 Scatterplot of body mass versus flipper length:
-Need name of data and which are x and y variables
-variabels only inside of `aes()`
+- Need name of data and which are x and y variables
+- variabels only inside of `aes()`
+- individual graphs `face_wrap` or `facet_grid`
 ```{r}
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + 
-  geom_point(aes(color = species), size = 4)
+  geom_point(aes(color = species), size = 4) + 
+  facet_wrap(~island) + 
+  theme_minimal() +
+  labs(x = "Body mass (g)",
+       y = "Flipper Length (mm)")
 ```
 
