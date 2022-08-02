@@ -36,3 +36,6 @@ z <- seq(-3,4,0.5)
 eval(dg_dz)
 ```
 
+
+
+some awesome text!!
